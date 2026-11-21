@@ -1,16 +1,22 @@
-import express, { type Express, type Request, type Response } from 'express';
-import mongoose from 'mongoose';
+import express, { type Express} from 'express';
+import { connectDb } from './config/db.ts';
 
 const app: Express = express();
 
-const uri = process.env.MONGO_URI
-  ?? 'mongodb://localhost:27017/app';
+app.use(express.json());
+const PORT = 3000;
 
-async function connectDb() {
-  await mongoose.connect(uri);
-  console.log('MongoDB conectado');
+async function startServer() {
+    try {
+        await connectDb();
+
+        app.listen(PORT, () => {
+            console.log(`Servidor escuchando en el puerto ${PORT}`);
+        });
+
+    } catch (error) {
+        console.error('No se pudo iniciar el servidor');
+        process.exit(1);
+    }
 }
-
-connectDb();
-
-app.listen(3000);
+startServer();
