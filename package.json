@@ -11,10 +11,12 @@
     "dev": "node --env-file=atlas-credentials.env ./src/index.ts"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.3.0",
     "mongoose": "^9.12.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.6",
     "typescript": "^7.0.2"

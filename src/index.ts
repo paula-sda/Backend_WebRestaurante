@@ -1,9 +1,15 @@
 import express, { type Express} from 'express';
 import { connectDb } from './config/db.ts';
+import cors from 'cors';
+import drinkRoutes from './routes/drinkRoutes.ts';
 
 const app: Express = express();
+app.use(cors({
+    origin: 'http://localhost:4200'
+}));
 
 app.use(express.json());
+app.use('/api/drinks', drinkRoutes);
 const PORT = 3000;
 
 async function startServer() {
