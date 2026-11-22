@@ -11,6 +11,7 @@
     "dev": "node --env-file=atlas-credentials.env ./src/index.ts"
   },
   "dependencies": {
+    "@emailjs/nodejs": "^5.0.2",
     "cors": "^2.8.6",
     "express": "^5.3.0",
     "mongoose": "^9.12.1"

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva confirmada | Rouge de Minuit</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #171414;
+            font-family: Arial, sans-serif;
+            color: #171414;
+        }
+
+        .confirmation-card {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #f4eee5;
+            text-align: center;
+        }
+
+        .header {
+            padding: 30px 20px;
+            background-color: #000;
+            color: #f4eee5;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            color: #d8b477;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .content {
+            padding: 45px 30px;
+        }
+
+        .check {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #781928;
+            border-radius: 50%;
+            color: #781928;
+            font-size: 32px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            color: #781928;
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        .message {
+            margin: 0 auto 25px;
+            max-width: 430px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .notice {
+            padding: 18px;
+            background-color: #fff;
+            border-left: 4px solid #781928;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .goodbye {
+            margin-top: 28px;
+            color: #781928;
+            font-family: Georgia, serif;
+            font-size: 20px;
+        }
+
+        .footer {
+            padding: 16px;
+            background-color: #781928;
+            color: #f4eee5;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="confirmation-card">
+
+        <header class="header">
+            <div class="logo">Rouge de Minuit</div>
+            <div class="subtitle">COCKTAIL &amp; COFFEE</div>
+        </header>
+
+        <section class="content">
+
+            <div class="check">✓</div>
+
+            <h1>¡Reserva confirmada!</h1>
+
+            <p class="message">
+                Gracias por confiar en Rouge de Minuit.
+                Tu reserva se ha confirmado correctamente.
+            </p>
+
+            <div class="notice">
+                Recibirás un segundo correo electrónico
+                con tu código de reserva.
+            </div>
+
+            <p class="goodbye">
+                ¡Nos vemos pronto!
+            </p>
+
+        </section>
+
+        <footer class="footer">
+            Vitoria-Gasteiz · Cocktail &amp; Coffee
+        </footer>
+
+    </main>
+</body>
+</html>
